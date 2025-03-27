@@ -20,8 +20,8 @@ import 'package:provider/provider.dart';
 class RidesScreen extends StatelessWidget {
   const RidesScreen({super.key});
 
-  RidePreference get currentPreference =>
-      RidePrefService.instance.currentPreference!;
+  // RidePreference get currentPreference =>
+  //     RidePrefService.instance.currentPreference!;
 
   void onBackPressed(BuildContext context) {
     // 1 - Back to the previous view

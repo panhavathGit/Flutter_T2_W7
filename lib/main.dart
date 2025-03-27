@@ -11,7 +11,7 @@ import 'ui/screens/ride_pref/ride_pref_screen.dart';
 import 'ui/theme/theme.dart';
 import 'package:week_3_blabla_project/provider/rides_preferences_provider.dart';
 
-void main() {
+void main() async {
   // 1 - Initialize the services
   // RidePrefService.initialize(MockRidePreferencesRepository());
 
