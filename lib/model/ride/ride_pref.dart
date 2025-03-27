@@ -4,7 +4,7 @@ import '../location/locations.dart';
 /// This model describes a ride preference.
 /// A ride preference consists of the selection of a departure + arrival + a date and a number of passenger
 ///
-class RidePreference {
+class   RidePreference {
   final Location departure;
   final DateTime departureDate;
   final Location arrival;
@@ -15,6 +15,23 @@ class RidePreference {
       required this.departureDate,
       required this.arrival,
       required this.requestedSeats});
+
+  @override
+  bool operator ==(Object other) {
+    if (identical(this, other)) return true;
+    return other is RidePreference &&
+        other.departure == departure &&
+        other.departureDate == departureDate &&
+        other.arrival == arrival &&
+        other.requestedSeats == requestedSeats;
+  }
+
+  @override
+  int get hashCode =>
+      departure.hashCode ^
+      departureDate.hashCode ^
+      arrival.hashCode ^
+      requestedSeats.hashCode;
 
   @override
   String toString() {
